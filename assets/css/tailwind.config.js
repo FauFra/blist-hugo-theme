@@ -1,4 +1,5 @@
 const themeDir = __dirname + "/../../";
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   purge: {
@@ -88,5 +89,17 @@ module.exports = {
       typography: ["dark"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.white-bike':{
+          filter: 'invert(100%) sepia(0%) saturate(7490%) hue-rotate(173deg) brightness(100%) contrast(101%)'
+        },
+        '.black-bike':{
+          filter: 'invert(0%) sepia(5%) saturate(7500%) hue-rotate(231deg) brightness(92%) contrast(104%)'
+        },
+      })
+    })
+  ],
 };
