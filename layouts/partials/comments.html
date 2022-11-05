@@ -1,0 +1,7 @@
+{{ if (isset .Site.Params "commentoURL") }}
+<div class="container mx-auto px-5 pt-5 max-w-screen-lg">
+    <script defer src="http://{{ .Site.CommentoURL }}/js/commento.js"></script>
+    <noscript>Please enable JavaScript to load the comments.</noscript>
+    <div id="commento"></div>
+</div>
+{{ end }}
