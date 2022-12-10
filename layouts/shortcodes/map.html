@@ -1,0 +1,4 @@
+{{ .Scratch.Set "url" (.Get "url") }}
+
+
+<iframe src='https://gpx.studio/?state=%7B%22urls%22:%5B%22{{ urlquery (.Scratch.Get "url") }}%22%5D%7D&embed&slope' width="100%" height="500" frameborder="0" allowfullscreen><p><a href='https://gpx.studio/?state=%7B%22urls%22:%5B%22{{ urlquery (.Scratch.Get "url") }}%22%5D%7D'></a></p></iframe>
