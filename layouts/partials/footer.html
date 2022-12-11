@@ -84,3 +84,9 @@
 {{- $js := resources.Get "js/carousel.js" -}}
 <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+
+{{- $css := resources.Get "css/lightbox.css" -}}
+{{- $js := resources.Get "js/lightbox.js" -}}
+<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
